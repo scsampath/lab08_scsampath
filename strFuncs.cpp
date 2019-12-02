@@ -24,7 +24,7 @@ bool isPalindrome(const string s1) {
 	{
 		return true;
 	}
-	if (s1.front() == s1.back())
+	if (tolower(s1.front()) == tolower(s1.back()))
 	{
 		return isPalindrome(s1.substr(1,s1.length() - 2));
 	}
