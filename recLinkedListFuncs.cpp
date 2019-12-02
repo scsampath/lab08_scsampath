@@ -13,7 +13,6 @@ int recursiveSum(Node* head) {
   }
   if(head -> next)
   {
-  	sum += head->data;
   	head = head -> next;
   	sum += recursiveSum(head);
   }
