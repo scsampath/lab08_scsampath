@@ -22,16 +22,21 @@ bool isAnagram(string s1, string s2) {
 		}
 	}
 	for (int i = 0; i < s2.length(); i++) {
-		tolower(s2[i]);
+		tolower(s1[i]);
 		if (s2[i] >= 'a' && s2[i] <= 'z') {
 			c2[s2[i] - 97]++;
 		}
 	}
-	if (c1 == c2)
+	bool returnval = true;
+	for (int i = 0; i < 26; i++)
 	{
-		return true;
+		if (c1[i] != c2[i])
+		{
+			returnval = false;
+			break;
+		}
 	}
-	return false;
+	return returnval;
 }
 
 /* Precondition: s1 is a valid string that may contain upper or lower case alphabets, no spaces or special characters
