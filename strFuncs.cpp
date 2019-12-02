@@ -18,9 +18,17 @@ bool isAnagram(string s1, string s2){
 /* Precondition: s1 is a valid string that may contain upper or lower case alphabets, no spaces or special characters
  * Postcondition: Returns true if s1 is a palindrome, false otherwise
  *You should provide a recursive solution*/
-bool isPalindrome(const string s1){
-
-  return true;
+bool isPalindrome(const string s1) {
+	if (s1.length() == 0 || s1.length() == 1)
+	{
+		return true;
+	}
+	if (s1.front() == s1.back())
+	{
+		return isPalindrome(s1.substr(1,s1.length() - 2));
+	}
+	return false;
 }
+
 
 
