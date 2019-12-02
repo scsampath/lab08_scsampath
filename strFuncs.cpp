@@ -22,7 +22,7 @@ bool isAnagram(string s1, string s2) {
 		}
 	}
 	for (int i = 0; i < s2.length(); i++) {
-		s2[i] = tolower(s1[i]);
+		s2[i] = tolower(s2[i]);
 		if (s2[i] >= 'a' && s2[i] <= 'z') {
 			c2[s2[i] - 97]++;
 		}
@@ -36,8 +36,7 @@ bool isAnagram(string s1, string s2) {
 			break;
 		}
 	}
-	return returnval;
-}
+	return ret
 
 /* Precondition: s1 is a valid string that may contain upper or lower case alphabets, no spaces or special characters
  * Postcondition: Returns true if s1 is a palindrome, false otherwise
