@@ -12,8 +12,26 @@ using namespace std;
  * the case for the letters (upper or lower) should not
  * affect your result. 
  */
-bool isAnagram(string s1, string s2){
-  return true;
+bool isAnagram(string s1, string s2) {
+	int c1[26];
+	int c2[26];
+	for (int i = 0; i < s1.length(); i++) {
+		tolower(s1[i]);
+		if (s1[i] >= 'a' && s1[i] <= 'z') {
+			c1[s1[i] - 97]++;
+		}
+	}
+	for (int i = 0; i < s2.length(); i++) {
+		tolower(s1[i]);
+		if (s2[i] >= 'a' && s2[i] <= 'z') {
+			c2[s2[i] - 97]++;
+		}
+	}
+	if (c1 == c2)
+	{
+		return true;
+	}
+	return false;
 }
 
 /* Precondition: s1 is a valid string that may contain upper or lower case alphabets, no spaces or special characters
