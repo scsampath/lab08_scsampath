@@ -36,7 +36,8 @@ bool isAnagram(string s1, string s2) {
 			break;
 		}
 	}
-	return ret
+	return returnval;
+}
 
 /* Precondition: s1 is a valid string that may contain upper or lower case alphabets, no spaces or special characters
  * Postcondition: Returns true if s1 is a palindrome, false otherwise
