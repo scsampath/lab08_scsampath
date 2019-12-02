@@ -22,7 +22,7 @@ bool isAnagram(string s1, string s2) {
 		}
 	}
 	for (int i = 0; i < s2.length(); i++) {
-		tolower(s1[i]);
+		tolower(s2[i]);
 		if (s2[i] >= 'a' && s2[i] <= 'z') {
 			c2[s2[i] - 97]++;
 		}
