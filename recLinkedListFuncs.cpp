@@ -13,11 +13,12 @@ int recursiveSum(Node* head) {
   }
   if(head -> next)
   {
+  	sum += head->data;
   	head = head -> next;
-  	recursiveSum(head);
+  	sum += recursiveSum(head);
   }
-
 }
+
 
 //head: ptr to a Node* which is the head of a linked list
 //return the largest value in the linked list using a recursive approach
