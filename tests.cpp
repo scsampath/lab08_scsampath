@@ -62,10 +62,10 @@ int main(int argc, char* argv[]) {
       LinkedList* list4 = arrayToLinkedList(l4,3);
       Node* h4 = list4 -> head;
 
-      ASSERT_EQUALS(73, recursiveSum(list1));
-      ASSERT_EQUALS(-28, recursiveSum(list2));
-      ASSERT_EQUALS(6, recursiveSum(list3));
-      ASSERT_EQUALS(13, recursiveSum(list4));
+      ASSERT_EQUALS(73, recursiveSum(h1));
+      ASSERT_EQUALS(-28, recursiveSum(h2));
+      ASSERT_EQUALS(6, recursiveSum(h3));
+      ASSERT_EQUALS(13, recursiveSum(h4));
     } else if (testNum == 4) {
 
       START_TEST_GROUP("RECURSIVE_LARGEST_VALUE_OF_LINKEDLIST");
