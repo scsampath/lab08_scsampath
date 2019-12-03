@@ -41,13 +41,13 @@ int main(int argc, char* argv[]) {
       string a8 = "nop";
 
       ASSERT_EQUALS(1, isAnagram(a1,a2));
-      cout<<isAnagram(a1,a2);
+      cout<<endl<<isAnagram(a1,a2)<<endl;
       ASSERT_EQUALS(1, isAnagram(a3,a4));
-      cout<<isAnagram(a3,a4);
+      cout<<endl<<isAnagram(a3,a4)<<endl;
       ASSERT_EQUALS(0, isAnagram(a5,a6));
-      cout<<isAnagram(a5,a6);
+      cout<<endl<<isAnagram(a5,a6)<<endl;
       ASSERT_EQUALS(0, isAnagram(a7,a8));
-      cout<<isAnagram(a7,a8);
+      cout<<endl<<isAnagram(a7,a8)<<endl;
     }
   }
   
