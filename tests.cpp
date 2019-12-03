@@ -17,10 +17,10 @@ int main(int argc, char* argv[]) {
 
       START_TEST_GROUP("IS_PALINDROME");
 
-      string s1 = "reverse"
-      string s2 = "rever"
-      string s3 = "nope"
-      string s4 = "adaaada"
+      string s1 = "reverse";
+      string s2 = "rever";
+      string s3 = "nope";
+      string s4 = "adaaada";
 
       ASSERT_EQUALS(0, isPalindrome(s1));
       ASSERT_EQUALS(1, isPalindrome(s2));
@@ -31,10 +31,10 @@ int main(int argc, char* argv[]) {
 
       START_TEST_GROUP("IS_ANAGRAM");
       
-      string a1 = "dormitory"
-      string a2 = "dirty room"
-      string a3 = "dormitoy"
-      string a4 = "dirty room"
+      string a1 = "dormitory";
+      string a2 = "dirty room";
+      string a3 = "dormitoy";
+      string a4 = "dirty room";
 
       ASSERT_EQUALS(1, isAnagram(a1,a2));
       ASSERT_EQUALS(0, isAnagram(a3,a4));
