@@ -31,13 +31,19 @@ int main(int argc, char* argv[]) {
 
       START_TEST_GROUP("IS_ANAGRAM");
       
-      string a1 = "drity";
+      string a1 = "d i r t y";
       string a2 = "dirty";
-      string a3 = "dormitoy";
+      string a3 = "dormitory";
       string a4 = "dirty room";
+      string a5 = "rabbit";
+      string a6 = "dirt";
+      string a7 = "nope";
+      string a8 = "nop";
 
       ASSERT_EQUALS(1, isAnagram(a1,a2));
-      ASSERT_EQUALS(0, isAnagram(a3,a4));
+      ASSERT_EQUALS(1, isAnagram(a3,a4));
+      ASSERT_EQUALS(0, isAnagram(a5,a6));
+      ASSERT_EQUALS(0, isAnagram(a7,a8));
     }
   }
   
