@@ -24,6 +24,7 @@ int main(int argc, char* argv[]) {
       ASSERT_EQUALS(1, isAnagram(s1,s2);
       ASSERT_EQUALS(0, isAnagram(s3,s4);
     } 
+   }
   
   return 0;
 }
