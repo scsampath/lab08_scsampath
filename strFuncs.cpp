@@ -13,8 +13,8 @@ using namespace std;
  * affect your result. 
  */
 bool isAnagram(string s1, string s2) {
-	int c1[26];
-	int c2[26];
+	int c1[26] = {0};
+	int c2[26] = {0};
 	for (int i = 0; i < s1.length(); i++) {
 		s1[i] = tolower(s1[i]);
 		if (s1[i] >= 'a' && s1[i] <= 'z') {
