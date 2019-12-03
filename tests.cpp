@@ -2,6 +2,8 @@
 #include "recLinkedListFuncs.cpp"
 #include "strFuncs.cpp"
 #include "tddFuncs.h"
+#include <string>
+#include <cstring>
 #include <iostream>
 using namespace std;
 
@@ -13,43 +15,15 @@ int main(int argc, char* argv[]) {
     int testNum = atoi(argv[1]);
     if (testNum == 1) {
 
-      START_TEST_GROUP("RECURSIVE_SUM_OF_LINKED_LIST");
+      START_TEST_GROUP("ANAGRAM");
 
-      int highestFirst[3]={73,57,61};
-      LinkedList *list1 = arrayToLinkedList(highestFirst,3);
-      int highestSecond[3] = {-7, -4, -11};
-      LinkedList* list2 = arrayToLinkedList(highestSecond,3);
-      int highestLast[4] = {1,2,3,4};
-      LinkedList* list3 = arrayToLinkedList(highestLast,4);
-      int tied[3] = {1,3,3};
-      LinkedList* list4 = arrayToLinkedList(tied,3);
-	    
-      ASSERT_EQUALS(191, recursiveSum(list1));
-      ASSERT_EQUALS(-22, recursiveSum(list2));
-      ASSERT_EQUALS(10, recursiveSum(list3));
-      ASSERT_EQUALS(7, recursiveSum(list4));
-
-
-    } else if (testNum == 2) {
-
-      START_TEST_GROUP("RECURSIVE_LARGEST_VALUE_OF_LINKED_LIST");
-
-      int highestFirst[3]={73,57,61};
-      LinkedList *list1 = arrayToLinkedList(highestFirst,3);
-      int highestSecond[3] = {-7, -4, -11};
-      LinkedList* list2 = arrayToLinkedList(highestSecond,3);
-      int highestLast[4] = {1,2,3,4};
-      LinkedList* list3 = arrayToLinkedList(highestLast,4);
-      int tied[3] = {1,3,3};
-      LinkedList* list4 = arrayToLinkedList(tied,3);
-
-      ASSERT_EQUALS(73, recursiveLargestValue(list1));
-      ASSERT_EQUALS(-4, recursiveLargestValue(list2));
-      ASSERT_EQUALS(4, recursiveLargestValue(list3));
-      ASSERT_EQUALS(3, recursiveLargestValue(list4));
-
-    }    
-  } 
+      string s1 = "dirty room";
+      string s2 = "dormitory";
+      string s3 = "basket";
+      string s4 = "teksa";
+      ASSERT_EQUALS(1, isAnagram(s1,s2);
+      ASSERT_EQUALS(0, isAnagram(s3,s4);
+    } 
   
   return 0;
 }
