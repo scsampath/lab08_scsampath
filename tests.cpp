@@ -1,5 +1,6 @@
 #include "linkedListFuncs.h"
-#include "moreLinkedListFuncs.h"
+#include "recLinkedListFuncs.cpp"
+#include "strFuncs.cpp"
 #include "tddFuncs.h"
 #include <iostream>
 using namespace std;
