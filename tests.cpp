@@ -31,8 +31,8 @@ int main(int argc, char* argv[]) {
 
       START_TEST_GROUP("IS_ANAGRAM");
       
-      string a1 = "dormitory";
-      string a2 = "dirty room";
+      string a1 = "drity";
+      string a2 = "dirty";
       string a3 = "dormitoy";
       string a4 = "dirty room";
 
