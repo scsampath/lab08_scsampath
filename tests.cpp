@@ -68,17 +68,21 @@ int main(int argc, char* argv[]) {
       //recursive largest value test
       int l1[3]={9,3,61};
       LinkedList *list1 = arrayToLinkedList(l1,3);
+      Node* h1 = list1 -> head;
       int l2[3] = {-7, -10, -11};
       LinkedList* list2 = arrayToLinkedList(l2,3);
+      Node* h2 = list2 -> head;
       int l3[4] = {1,2,3,0};
       LinkedList* list3 = arrayToLinkedList(l3,4);
+      Node* h3 = list3 -> head;
       int l4[3] = {5,-5,3};
       LinkedList* list4 = arrayToLinkedList(l4,3);
+      Node* h4 = list4 -> head;
 
-      ASSERT_EQUALS(61, recursiveLargestValue(list1));
-      ASSERT_EQUALS(-7, recursiveLargestValue(list2));
-      ASSERT_EQUALS(3, recursiveLargestValue(list3));
-      ASSERT_EQUALS(5, recursiveLargestValue(list4));
+      ASSERT_EQUALS(61, recursiveLargestValue(h1));
+      ASSERT_EQUALS(-7, recursiveLargestValue(h2));
+      ASSERT_EQUALS(3, recursiveLargestValue(h3));
+      ASSERT_EQUALS(5, recursiveLargestValue(h4));
     }
   }
   
