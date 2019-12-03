@@ -14,7 +14,7 @@ tests: ${BINARIES}
 	./tests 2
 	
 
-llTests: llTests.o ${COMMON_OBJECT_FILES}
+tests: tests.o ${COMMON_OBJECT_FILES}
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
 
 clean:
