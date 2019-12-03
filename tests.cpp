@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
   if(argc < 2) {
     std::cerr << "Usage: " << argv[0] << " [num of test to run]" << std::endl;
     return 1;
-  }else {
+  } else {
     int testNum = atoi(argv[1]);
     if (testNum == 1) {
 
