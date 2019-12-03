@@ -10,10 +10,10 @@ COMMON_OBJECT_FILES = linkedListFuncs.o recLinkedListFuncs.o strFuncs.cpp tddFun
 all: ${BINARIES}
 
 tests: ${BINARIES}
-	./Tests 1
-	./Tests 2
-	./Tests 3
-	./Tests 4
+	./tests 1
+	./tests 2
+	./tests 3
+	./tests 4
 
 llTests: llTests.o ${COMMON_OBJECT_FILES}
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
