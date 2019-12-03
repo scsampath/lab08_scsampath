@@ -1,3 +1,4 @@
+//Sachen Sampath
 #include "linkedListFuncs.h"
 #include "recLinkedListFuncs.h"
 #include "strFuncs.h"
@@ -11,16 +12,16 @@ int main(int argc, char* argv[]) {
   if(argc < 2) {
     std::cerr << "Usage: " << argv[0] << " [num of test to run]" << std::endl;
     return 1;
-  }else {
+  } else {
     int testNum = atoi(argv[1]);
     if (testNum == 1) {
-
+      //palindrome test
       START_TEST_GROUP("IS_PALINDROME");
 
       string s1 = "reverse";
       string s2 = "rever";
       string s3 = "nope";
-      string s4 = "adaaada";
+      string s4 = "detartrated";
 
       ASSERT_EQUALS(0, isPalindrome(s1));
       ASSERT_EQUALS(1, isPalindrome(s2));
@@ -28,7 +29,7 @@ int main(int argc, char* argv[]) {
       ASSERT_EQUALS(1, isPalindrome(s4));
 
     } else if (testNum == 2) {
-
+      //anagram test
       START_TEST_GROUP("IS_ANAGRAM");
       
       string a1 = "d i r t y";
@@ -41,13 +42,43 @@ int main(int argc, char* argv[]) {
       string a8 = "nop";
 
       ASSERT_EQUALS(1, isAnagram(a1,a2));
-      cout<<endl<<isAnagram(a1,a2)<<endl;
       ASSERT_EQUALS(1, isAnagram(a3,a4));
-      cout<<endl<<isAnagram(a3,a4)<<endl;
       ASSERT_EQUALS(0, isAnagram(a5,a6));
-      cout<<endl<<isAnagram(a5,a6)<<endl;
       ASSERT_EQUALS(0, isAnagram(a7,a8));
-      cout<<endl<<isAnagram(a7,a8)<<endl;
+    } else if (testNum == 3) {
+      //recursive sum test
+      START_TEST_GROUP("RECURSIVE_SUM_OF_LINKEDLIST");
+      
+      int l1[3]={9,3,61};
+      LinkedList *list1 = arrayToLinkedList(l1,3);
+      int l2[3] = {-7, -10, -11};
+      LinkedList* list2 = arrayToLinkedList(l2,3);
+      int l3[4] = {1,2,3,0};
+      LinkedList* list3 = arrayToLinkedList(l3,4);
+      int l4[3] = {5,5,3};
+      LinkedList* list4 = arrayToLinkedList(l4,3);
+
+      ASSERT_EQUALS(73, recursive(list1));
+      ASSERT_EQUALS(-28, recursive(list2));
+      ASSERT_EQUALS(6, recursive(list3));
+      ASSERT_EQUALS(13, recursive(list4));
+    } else if (testNum == 4) {
+
+      START_TEST_GROUP("RECURSIVE_LARGEST_VALUE_OF_LINKEDLIST");
+      //recursive largest value test
+      int l1[3]={9,3,61};
+      LinkedList *list1 = arrayToLinkedList(l1,3);
+      int l2[3] = {-7, -10, -11};
+      LinkedList* list2 = arrayToLinkedList(l2,3);
+      int l3[4] = {1,2,3,0};
+      LinkedList* list3 = arrayToLinkedList(l3,4);
+      int l4[3] = {5,-5,3};
+      LinkedList* list4 = arrayToLinkedList(l4,3);
+
+      ASSERT_EQUALS(61, recursiveLargestValue(list1));
+      ASSERT_EQUALS(-7, recursiveLargestValue(list2));
+      ASSERT_EQUALS(3, recursiveLargestValue(list3));
+      ASSERT_EQUALS(5, recursiveLargestValue(list4));
     }
   }
   
