@@ -21,8 +21,8 @@ int main(int argc, char* argv[]) {
       string s2 = "dormitory";
       string s3 = "basket";
       string s4 = "teksa";
-      ASSERT_EQUALS(1, isAnagram(s1,s2);
-      ASSERT_EQUALS(0, isAnagram(s3,s4);
+      ASSERT_EQUALS(1, isAnagram(s1,s2));
+      ASSERT_EQUALS(0, isAnagram(s3,s4));
     } 
    }
   
