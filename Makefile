@@ -3,7 +3,7 @@ CXX = g++
 
 CXXFLAGS = -Wall -Wno-uninitialized
 
-BINARIES= llTests
+BINARIES= tests
 
 COMMON_OBJECT_FILES = linkedListFuncs.o recLinkedListFuncs.o strFuncs.cpp tddFuncs.o
 
