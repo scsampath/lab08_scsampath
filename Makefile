@@ -5,7 +5,7 @@ CXXFLAGS = -Wall -Wno-uninitialized
 
 BINARIES= llTests
 
-COMMON_OBJECT_FILES = linkedListFuncs.o moreLinkedListFuncs.o tddFuncs.o
+COMMON_OBJECT_FILES = linkedListFuncs.o recLinkedListFuncs.o strFuncs.cpp tddFuncs.o
 
 all: ${BINARIES}
 
