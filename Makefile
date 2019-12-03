@@ -11,9 +11,6 @@ all: ${BINARIES}
 
 tests: ${BINARIES}
 	./tests 1
-	./tests 2
-	./tests 3
-	./tests 4
 
 llTests: llTests.o ${COMMON_OBJECT_FILES}
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
