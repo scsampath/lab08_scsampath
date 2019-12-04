@@ -38,7 +38,6 @@ bool isAnagram(string s1, string s2) {
 	}
 	return returnval;
 }
-
 //converts char to lowercase char
 char toLower(char c1)
 {
