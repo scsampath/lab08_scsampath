@@ -9,7 +9,7 @@ COMMON_OBJECT_FILES = linkedListFuncs.o recLinkedListFuncs.o strFuncs.o tddFuncs
 
 all: ${BINARIES}
 
-tests: ${BINARIES}
+test: ${BINARIES}
 	./tests 1
 	./tests 2
 	./tests 3
