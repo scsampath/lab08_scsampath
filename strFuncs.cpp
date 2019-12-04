@@ -12,6 +12,16 @@ using namespace std;
  * the case for the letters (upper or lower) should not
  * affect your result. 
  */
+
+//converts char to lowercase char
+char toLower(char c1)
+{
+	if (c1 <= 'Z' && c1 >= 'A'){
+        	return c1 - ('Z' - 'z');
+	}
+   	return c1;	
+}
+
 bool isAnagram(string s1, string s2) {
 	int c1[26] = {0};
 	int c2[26] = {0};
@@ -37,15 +47,6 @@ bool isAnagram(string s1, string s2) {
 		}
 	}
 	return returnval;
-}
-
-//converts char to lowercase char
-char toLower(char c1)
-{
-	if (c1 <= 'Z' && c1 >= 'A'){
-        	return c1 - ('Z' - 'z');
-	}
-   	return c1;	
 }
 
 /* Precondition: s1 is a valid string that may contain upper or lower case alphabets, no spaces or special characters
