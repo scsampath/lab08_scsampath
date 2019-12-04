@@ -16,13 +16,13 @@ bool isAnagram(string s1, string s2) {
 	int c1[26] = {0};
 	int c2[26] = {0};
 	for (int i = 0; i < s1.length(); i++) {
-		s1[i] = tolower(s1[i]);
+		s1[i] = toLower(s1[i]);
 		if (s1[i] >= 'a' && s1[i] <= 'z') {
 			c1[s1[i] - 97]++;
 		}
 	}
 	for (int i = 0; i < s2.length(); i++) {
-		s2[i] = tolower(s2[i]);
+		s2[i] = toLower(s2[i]);
 		if (s2[i] >= 'a' && s2[i] <= 'z') {
 			c2[s2[i] - 97]++;
 		}
@@ -37,6 +37,15 @@ bool isAnagram(string s1, string s2) {
 		}
 	}
 	return returnval;
+}
+
+//converts char to lowercase char
+char toLower(char c1)
+{
+	if (c1 <= 'Z' && c1 >= 'A'){
+        	return c1 - ('Z' - 'z');
+	}
+   	 return c1;	
 }
 
 /* Precondition: s1 is a valid string that may contain upper or lower case alphabets, no spaces or special characters
