@@ -12,6 +12,8 @@ all: ${BINARIES}
 tests: ${BINARIES}
 	./tests 1
 	./tests 2
+	./tests 3
+	./tests 4
 	
 
 tests: tests.o ${COMMON_OBJECT_FILES}
