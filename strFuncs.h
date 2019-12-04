@@ -7,5 +7,6 @@ bool isAnagram(string s1, string s2);
 
 bool isPalindrome(const string s1);
 
+char toLower(char c1);
 
 #endif //STRFUNCS_H
